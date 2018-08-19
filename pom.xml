@@ -17,11 +17,30 @@
       </plugin>
       <plugin>
         <artifactId>maven-war-plugin</artifactId>
-        <version>3.0.0</version>
+        <version>3.2.2</version>
+        
         <configuration>
           <warSourceDirectory>WebContent</warSourceDirectory>
         </configuration>
+        <executions>
+        <execution>
+                    <phase>package</phase>
+                    <goals>
+                        <goal>war</goal>
+                    </goals>
+                </execution>
+        </executions>
       </plugin>
     </plugins>
   </build>
+  <dependencies>
+  <!-- https://mvnrepository.com/artifact/javax.servlet/servlet-api -->
+<dependency>
+    <groupId>javax.servlet</groupId>
+    <artifactId>javax.servlet-api</artifactId>
+    <version>4.0.1</version>
+    <scope>provided</scope>
+</dependency>
+  
+  </dependencies>
 </project>
